@@ -7,6 +7,9 @@
  * @package gridpack
  */
 
+define( 'THEMEROOT', get_stylesheet_directory_uri() );
+define( 'IMAGES', THEMEROOT . '/img' );
+
 if ( ! function_exists( 'gridpack_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -91,7 +94,7 @@ add_action( 'after_setup_theme', 'gridpack_setup' );
  * @global int $content_width
  */
 function gridpack_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'gridpack_content_width', 640 );
+	$GLOBALS['content_width'] = apply_filters( 'gridpack_content_width', 1170 );
 }
 add_action( 'after_setup_theme', 'gridpack_content_width', 0 );
 
@@ -117,7 +120,8 @@ add_action( 'widgets_init', 'gridpack_widgets_init' );
  * Enqueue scripts and styles.
  */
 function gridpack_scripts() {
-	wp_enqueue_style( 'gridpack-style', get_stylesheet_uri() );
+
+	wp_enqueue_style( 'gridpack-style', get_template_directory_uri() . '/dist/styles.css', array(), date("H:i:s"));
 
 	wp_enqueue_script( 'gridpack-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
