@@ -10,11 +10,11 @@ a {
 }
 
 a:visited {
-    color: color(var(--primary) saturation(+ 10%));
+    color: var(--dark-accent);
 }
 
 a:hover, a:focus, a:active {
-    color: midnightblue;
+    color: color(red a(10%));
 }
 
 a:focus {
@@ -33,13 +33,13 @@ a:hover, a:active {
     display: block;
     float: left;
     width: 100%;
-}
 
-.main-navigation ul {
-    display: none;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
+    & ul {
+        display: none;
+        list-style: none;
+        margin: 0;
+        padding-left: 0;
+    }
 }
 
 .main-navigation ul ul {

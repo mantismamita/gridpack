@@ -39,11 +39,7 @@ module.exports = {
                             }
                         },
                         {
-                            loader: 'postcss-loader',
-                            options: {
-                                sourceMap: true,
-                                minimize: true
-                            }
+                            loader: 'postcss-loader'
                         }
                     ]
                 })
