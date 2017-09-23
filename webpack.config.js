@@ -1,11 +1,17 @@
 const path = require('path');
+const webpack = require('webpack');
+const config = require('./config.js');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 module.exports = {
-    entry: "./src/index.js",
+    entry: {
+        main : "./src/index",
+        home : "./src/components/templates/home/index"
+    },
     output: {
         path: path.resolve(__dirname, "dist"),
-        filename: "bundle.js"
+        filename: '[name].bundle.js'
     },
     module: {
         rules: [
@@ -28,13 +34,15 @@ module.exports = {
                             loader: 'css-loader',
                             options: {
                                 importLoaders: 1,
-                                sourceMap: true
+                                sourceMap: true,
+                                minimize: true
                             }
                         },
                         {
                             loader: 'postcss-loader',
                             options: {
-                                sourceMap: true
+                                sourceMap: true,
+                                minimize: true
                             }
                         }
                     ]
@@ -48,7 +56,40 @@ module.exports = {
             }
         ],
     },
+    devServer: {
+        historyApiFallback: true,
+        compress: true,
+        port: 9000,
+        https: config.url.indexOf('https') > -1 ? true : false,
+        publicPath: config.fullPath,
+        proxy: {
+            '*': {
+                'target': config.url,
+                'secure': false
+            },
+            '/': {
+                target: config.url,
+                secure: false
+            }
+        },
+    },
     plugins: [
-        new ExtractTextPlugin("styles.css")
+        new ExtractTextPlugin({
+            filename:  (getPath) => {
+                return getPath('css/[name].css').replace('css/js', 'css');
+            },
+            allChunks: true
+        }),
+        new BrowserSyncPlugin( {
+                proxy: config.url,
+                files: [
+                    '**/*.php'
+                ],
+                reloadDelay: 0
+            }
+        ),
+        /*new webpack.optimize.CommonsChunkPlugin({
+            name: 'common'
+        })*/
     ]
 }

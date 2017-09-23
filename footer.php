@@ -30,5 +30,11 @@
 
 <?php wp_footer(); ?>
 
+<?php if ( $_SERVER['HTTP_HOST'] == 'kirstencassidy.dev'):?>
+    <script id="__bs_script__">//<![CDATA[
+        document.write("<script async src='http://localhost:3000/browser-sync/browser-sync-client.js?v=2.16.0'><\/script>");
+        //]]></script>
+<?php endif; ?>
+
 </body>
 </html>

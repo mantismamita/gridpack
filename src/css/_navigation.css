@@ -1,4 +1,4 @@
-
+@import '_vars.css';
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
@@ -6,11 +6,11 @@
 ## Links
 --------------------------------------------------------------*/
 a {
-    color: royalblue;
+    color: var(--primary);
 }
 
 a:visited {
-    color: purple;
+    color: color(var(--primary) saturation(+ 10%));
 }
 
 a:hover, a:focus, a:active {

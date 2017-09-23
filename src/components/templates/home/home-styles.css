@@ -1,0 +1,15 @@
+.site-header {
+    background: hotpink;
+}
+
+.content-area{
+    background: lightpink;
+}
+
+.widget-area{
+    background: orchid;
+}
+
+.site-footer {
+    background: plum;
+}
