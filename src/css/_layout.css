@@ -1,10 +1,9 @@
 .site {
-    width: 90%;
     max-width: 1170px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 150px auto 100px;
+    grid-template-rows: 225px auto 100px;
     grid-template-areas:
             "header header header header"
             "content content content content"
@@ -14,29 +13,32 @@
 .site-header {
     grid-area: header;
     background: aquamarine;
+    padding: 1rem;
 }
 
 .site-content{
     max-width: 1170px;
     grid-area: content;
     display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 4fr 2fr;
 }
 
 .content-area{
     grid-column: 1 / 2;
     grid-row: 1;
     background: darkcyan;
+    padding: 1rem;
 }
 
 .widget-area{
     grid-column: 2 / 2;
     grid-row: 1;
     background: darkturquoise;
+    padding: 1rem;
 }
 
 .site-footer {
     grid-area: footer;
     background: mediumaquamarine;
+    padding: 1rem;
 }

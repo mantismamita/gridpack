@@ -7,9 +7,13 @@
     --dark-accent: #4D4847;
     --text: #1B1E2B;
 
-
     --gutter-width: 1rem;
     --outer-margin: 2rem;
 
-
 }
+
+@custom-media --xs-viewport (max-width: 415px);
+@custom-media --sm-viewport (min-width: 768px);
+@custom-media --md-viewport (min-width: 1024px);
+@custom-media --lg-viewport (min-width: 1200px);
+@custom-media --xl-viewport (min-width: 1400px);

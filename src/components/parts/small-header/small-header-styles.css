@@ -1,7 +1,24 @@
 @import "../../../css/_vars.css";
 
+.site {
+    grid-template-rows: 125px auto 100px;
+}
+
+.site-header {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    & .site-branding {
+        grid-column: 1/1;
+    }
+
+    & .main-navigation {
+        grid-column: 2/2;
+    }
+}
+
 .site-title {
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin: 0;
 }
 
@@ -70,8 +87,6 @@
         transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
-
-
 
 /* Small menu. */
 .menu-toggle,

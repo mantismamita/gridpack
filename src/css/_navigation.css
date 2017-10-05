@@ -14,7 +14,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-    color: color(red a(10%));
+    color: color(var(--primary) shade(10%));
 }
 
 a:focus {
@@ -23,76 +23,6 @@ a:focus {
 
 a:hover, a:active {
     outline: 0;
-}
-
-/*--------------------------------------------------------------
-## Menus
---------------------------------------------------------------*/
-.main-navigation {
-    clear: both;
-    display: block;
-    float: left;
-    width: 100%;
-
-    & ul {
-        display: none;
-        list-style: none;
-        margin: 0;
-        padding-left: 0;
-    }
-}
-
-.main-navigation ul ul {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-    float: left;
-    position: absolute;
-    top: 100%;
-    left: -999em;
-    z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-    left: -999em;
-    top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-    left: 100%;
-}
-
-.main-navigation ul ul a {
-    width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-    left: auto;
-}
-
-.main-navigation li {
-    float: left;
-    position: relative;
-}
-
-.main-navigation a {
-    display: block;
-    text-decoration: none;
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-    display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-    .menu-toggle {
-        display: none;
-    }
-    .main-navigation ul {
-        display: block;
-    }
 }
 
 .site-main .comment-navigation, .site-main

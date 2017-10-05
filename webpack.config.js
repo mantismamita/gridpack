@@ -7,7 +7,8 @@ const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 module.exports = {
     entry: {
         main : "./src/index",
-        home : "./src/components/templates/home/index"
+        home : "./src/components/templates/home/index",
+        single : "./src/components/templates/single/index"
     },
     output: {
         path: path.resolve(__dirname, "dist"),
