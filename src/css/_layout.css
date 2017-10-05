@@ -3,7 +3,7 @@
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 225px auto 100px;
+    grid-template-rows: 8rem auto 4rem;
     grid-template-areas:
             "header header header header"
             "content content content content"
@@ -13,7 +13,6 @@
 .site-header {
     grid-area: header;
     background: aquamarine;
-    padding: 1rem;
 }
 
 .site-content{
