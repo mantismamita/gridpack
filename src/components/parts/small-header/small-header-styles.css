@@ -1,7 +1,7 @@
 @import "../../../css/_vars.css";
 
 .site {
-    grid-template-rows: 125px auto 100px;
+    grid-template-rows: 4.5rem auto 100px;
 }
 
 .site-header {
@@ -10,25 +10,44 @@
 
     & .site-branding {
         grid-column: 1/1;
+
+        & .custom-logo-link{
+            float: left;
+            display: inline-block;
+        }
+
+        & img {
+            height: 4.5rem;
+            display: block;
+            background-color: #AA00FF;
+        }
+
+        & .site-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0;
+            line-height: 1;
+            display: inline-block;
+            padding: 1rem .5rem;
+
+            & a {
+                text-decoration: none;
+            }
+        }
     }
 
     & .main-navigation {
         grid-column: 2/2;
+        padding: 1rem;
     }
-}
 
-.site-title {
-    font-size: 1.5rem;
-    margin: 0;
 }
 
 /*--------------------------------------------------------------
 ## Main navigation menu
 --------------------------------------------------------------*/
 .main-navigation {
-    clear: both;
-    display: block;
-    float: left;
+    display: inline-block;
     width: 100%;
 
     & ul {
@@ -72,13 +91,14 @@
 
     & a {
         display: inline-block;
-        background-color: var(--white);
+        background-color: #EFE9F1;
+        color: #3E005D;
         text-decoration: none;
         border: none;
         border-radius: 3px;
         position: relative;
         padding: 12px 30px;
-        margin: 10px 1px;
+        margin: 0 1px;
         font-size: 12px;
         font-weight: 400;
         text-transform: uppercase;

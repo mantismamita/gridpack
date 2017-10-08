@@ -67,3 +67,8 @@ table {
     margin: 0 0 1.5em;
     width: 100%;
 }
+
+code, pre{
+    max-width: 800px;
+    overflow: scroll;
+}

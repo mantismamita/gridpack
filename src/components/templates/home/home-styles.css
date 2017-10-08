@@ -1,15 +1,23 @@
 .site-header {
-    background: blueviolet;
+    background: #FFBB00;
 }
 
 .content-area{
-    background: lightpink;
+    background: #FFECB9;
 }
 
 .widget-area{
-    background: orchid;
+    background: #FFD35C;
 }
 
 .site-footer {
-    background: plum;
+    background: #FFBB00;
+}
+
+a, a:visited{
+    color: #5D4400;
+}
+
+a:hover{
+    color: #181100;
 }

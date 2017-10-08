@@ -22,15 +22,16 @@
 		<div class="entry-meta">
 			<?php gridpack_posted_on(); ?>
 		</div><!-- .entry-meta -->
-		<?php
-		endif; ?>
+		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php
+
+		if ( is_singular() ) :
 			the_content( sprintf(
 				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
+				/* translators: %s: Name of current post. Only visible to screen readers */
 					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'gridpack' ),
 					array(
 						'span' => array(
@@ -45,6 +46,10 @@
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gridpack' ),
 				'after'  => '</div>',
 			) );
+		else :
+            the_excerpt();
+		endif;
+
 		?>
 	</div><!-- .entry-content -->
 
