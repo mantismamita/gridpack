@@ -1,74 +1,210 @@
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
+
+/*
+  Browsers resets and base typography.
+*/
 html {
-    box-sizing: border-box;
+    font-size: 16px;
 }
 
-*,
-*:before,
-*:after {
-    /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-    box-sizing: inherit;
+html, * {
+    font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+}
+/* add anything that doesnt have a set font size */
+input {
+    font-size: 1rem;
 }
 
 body {
-    background: #fff;
-    font-size: 16px;
-    /* Fallback for when there is no custom background color defined. */
+    margin: 0;
+    color: #212121;
+    background: #eeeeee;
 }
 
-hr {
-    background-color: #ccc;
-    border: 0;
-    height: 1px;
-    margin-bottom: 1.5rem;
+article, aside, section, figcaption, figure, main, details, menu {
+    display: block;
 }
 
-ul, ol {
-    margin: 0 0 1.5rem 0;
+summary {
+    display: list-item;
 }
 
-ul {
-    list-style: disc;
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
 }
 
-ol {
-    list-style: decimal;
+audio, video {
+    display: inline-block;
 }
 
-li > ul,
-li > ol {
-    margin-bottom: 0;
-    margin-left: 1.5em;
+svg:not(:root) {
+    overflow: hidden;
 }
 
-dt {
-    font-weight: bold;
-}
-
-dd {
-    margin: 0 1.5em 1.5em;
+input {
+    overflow: visible;
 }
 
 img {
-    height: auto;
-    /* Make sure images are scaled correctly. */
     max-width: 100%;
-    /* Adhere to container width. */
+    height: auto;
 }
 
-figure {
-    margin: 1em 0;
-    /* Extra wide images within figure tags don't overflow the content area. */
+dfn {
+    font-style: italic;
 }
 
-table {
-    margin: 0 0 1.5em;
-    width: 100%;
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.25em;
+    margin: 0.75rem 0.5rem;
+    font-weight: 500;
 }
 
-code, pre{
-    max-width: 800px;
-    overflow: scroll;
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    color: #424242;
+    display: block;
+    margin-top: -0.25em;
 }
+
+h1 {
+    font-size: 2.4375rem;
+}
+
+h2 {
+    font-size: 1.935rem;
+}
+
+h3 {
+    font-size: 1.5625rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 0.8125rem;
+}
+
+p {
+    margin: 0.5rem;
+}
+
+ol, ul {
+    margin: 0.5rem;
+    padding-left: 1.25rem;
+}
+
+b, strong {
+    font-weight: 600;
+}
+
+hr {
+    box-sizing: content-box;
+    border: 0;
+    overflow: visible;
+    line-height: 1.25em;
+    margin: 0.5rem;
+    height: 0;
+    border-top: 0.0625rem solid #757575;
+}
+
+blockquote {
+    display: block;
+    position: relative;
+    font-style: italic;
+    background: #e0e0e0;
+    margin: 0.5rem;
+    padding: 0.5rem 0.5rem 1.5rem;
+    border-left: 0.25rem solid #3f51b5;
+    border-radius: 0 0.1875rem 0.1875rem 0;
+    box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.14), 0 0.0625rem 0.3125rem 0 rgba(0, 0, 0, 0.12), 0 0.1875rem 0.0625rem -0.125rem rgba(0, 0, 0, 0.2);
+}
+
+blockquote:after {
+    position: absolute;
+    font-style: normal;
+    font-size: 0.875rem;
+    color: #616161;
+    left: 0.625rem;
+    bottom: 0;
+    content: "— " attr(cite);
+}
+
+code, kbd, pre, samp {
+    font-family: monospace, monospace;
+}
+
+code {
+    border-radius: 0.125rem;
+    background: #e0e0e0;
+    padding: 0.125rem 0.25rem;
+    box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.14), 0 0.0625rem 0.3125rem 0 rgba(0, 0, 0, 0.12), 0 0.1875rem 0.0625rem -0.125rem rgba(0, 0, 0, 0.2);
+}
+
+pre {
+    overflow: auto;
+    border-radius: 0 0.1875rem 0.1875rem 0;
+    background: #e0e0e0;
+    padding: 0.75rem;
+    margin: 0.5rem;
+    border-left: 0.25rem solid #303f9f;
+    box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.14), 0 0.0625rem 0.3125rem 0 rgba(0, 0, 0, 0.12), 0 0.1875rem 0.0625rem -0.125rem rgba(0, 0, 0, 0.2);
+}
+
+kbd {
+    border-radius: 0.125rem;
+    background: #212121;
+    color: #fafafa;
+    padding: 0.125rem 0.25rem;
+    box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.14), 0 0.0625rem 0.3125rem 0 rgba(0, 0, 0, 0.12), 0 0.1875rem 0.0625rem -0.125rem rgba(0, 0, 0, 0.2);
+}
+
+small, sup, sub {
+    font-size: 0.75em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup, sub {
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+a {
+    color: #3f51b5;
+    text-decoration: underline;
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+a:visited {
+    color: #3f51b5;
+}
+
+a:hover, a:focus {
+    opacity: 0.75;
+}
+
+figcaption {
+    font-size: 0.8125rem;
+    color: #424242;
+}
+
+

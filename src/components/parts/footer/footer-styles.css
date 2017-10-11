@@ -1,0 +1,12 @@
+footer {
+  display: block;
+  background: #283593;
+  color: #fafafa;
+  margin: 1rem 0 0;
+  padding: 1.5rem 0.5rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+footer a, footer a:visited {
+  color: #f5f5f5;
+}

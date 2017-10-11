@@ -4,6 +4,10 @@
 
 .content-area{
   background: #D0F6F6;
+
+  & .entry-content{
+    max-width: 720px;
+  }
 }
 
 .widget-area{

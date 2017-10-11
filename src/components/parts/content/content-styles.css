@@ -1,0 +1,19 @@
+.hentry{
+  background: #d2ffe6;
+}
+
+.entry-meta, footer {
+  display: block;
+  background: #01873c;
+  color: #fafafa;
+  margin: 1rem 0 0;
+  padding: 0.5rem 0.5rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.entry-meta a,
+.entry-meta a:visited,
+footer a,
+footer a:visited {
+  color: #01873c;
+}

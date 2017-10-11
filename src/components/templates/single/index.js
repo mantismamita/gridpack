@@ -11,8 +11,7 @@
 * */
 
 /* Styles */
-import '../../../css/_normalize.css';
-import '../../../css/_typography.css';
+import '../../../css/_forms.css';
 import '../../../css/_elements.css';
 import '../../../css/_navigation.css';
 import '../../../css/_accessibility.css';
@@ -29,6 +28,7 @@ import './single-styles.css'
 /* Components */
 import '../../parts/small-header/index'
 import '../../parts/footer/index'
+import '../../parts/content/index'
 
 /* Global Scripts */
 import '../../../js/scripts.js'
