@@ -1,0 +1,24 @@
+@import "../../../css/_vars.css";
+
+.site-sidebar{
+
+  & .widget {
+    background-color: darkgray;
+  }
+
+  & .widget_search {
+    background-color: transparent;
+
+    & input {
+      margin: 0;
+    }
+
+    & .search-field {
+      width: calc(100% - 92px);
+    }
+
+    & label {
+      padding: 0;
+    }
+  }
+}

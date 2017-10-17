@@ -1,15 +1,19 @@
 @import "../../../css/_vars.css";
 
 .site {
-    grid-template-rows: 4.5rem auto 100px;
+    grid-template-rows: var(--small-header-height) auto 100px;
 }
 
 .site-header {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
+    @media(--lg-viewport) {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+    }
 
     & .site-branding {
-        grid-column: 1/1;
+        @media(--lg-viewport) {
+            grid-column: 1/1;
+        }
 
         & .custom-logo-link{
             float: left;
@@ -24,11 +28,10 @@
 
         & .site-title {
             font-size: 2rem;
-            font-weight: bold;
             margin: 0;
             line-height: 1;
             display: inline-block;
-            padding: 1rem .5rem;
+            padding: 0.5rem;
 
             & a {
                 text-decoration: none;
@@ -37,8 +40,10 @@
     }
 
     & .main-navigation {
-        grid-column: 2/2;
-        padding: 1rem;
+        @media(--lg-viewport) {
+            grid-column: 2/2;
+            padding: 1rem;
+        }
     }
 
 }

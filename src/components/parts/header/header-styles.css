@@ -1,13 +1,17 @@
 @import "../../../css/_vars.css";
 
 .site-header {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 5rem 3rem;
+    @media(--lg-viewport) {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 5rem 3rem;
+    }
 
     & .site-branding {
-        grid-row: 1/2;
-        grid-column: 1/1;
+        @media(--lg-viewport) {
+            grid-row: 1/2;
+            grid-column: 1/1;
+        }
 
         & .custom-logo-link{
             float: left;
@@ -29,17 +33,21 @@
     }
 
     & .main-navigation {
-        grid-row: 1/2;
-        grid-column: 2/2;
-        padding: 1rem;
+        @media(--lg-viewport) {
+            grid-row: 1/2;
+            grid-column: 2/2;
+            padding: 1rem;
+        }
     }
 
     & .site-description {
-        grid-row: 2/2;
-        grid-column: 1/3;
-        background-color: #FF457F;
-        margin: 0;
-        padding: .75rem 1rem;
+        @media(--lg-viewport) {
+            grid-row: 2/2;
+            grid-column: 1/3;
+            background-color: #FF457F;
+            margin: 0;
+            padding: .75rem 1rem;
+        }
     }
 }
 

@@ -1,4 +1,3 @@
-
 :root {
 
     --white: #F5F7EF;
@@ -9,6 +8,12 @@
 
     --gutter-width: 1rem;
     --outer-margin: 2rem;
+
+    --large-header-height: 125px;
+    --small-header-height: 72px;
+    --footer-height: 64px;
+
+    --max-width: 1200px;
 
 }
 

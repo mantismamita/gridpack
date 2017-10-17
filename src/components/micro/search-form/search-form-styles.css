@@ -1,0 +1,136 @@
+
+label {
+  padding: 0.25rem 0.5rem;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+input:not([type]), [type="text"], [type="email"], [type="number"], [type="search"],
+[type="password"], [type="url"], [type="tel"], textarea, select {
+  box-sizing: border-box;
+  background: #fafafa;
+  color: #212121;
+  border: 0.0625rem solid #bdbdbd;
+  border-radius: 0.125rem;
+  margin: 0.25rem;
+  padding: 0.5rem 0.75rem;
+}
+
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):hover, input:not([type="button"]):not([type="submit"]):not([type="reset"]):focus, textarea:hover, textarea:focus, select:hover, select:focus {
+  border-color: #0288d1;
+  box-shadow: none;
+}
+
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):invalid, input:not([type="button"]):not([type="submit"]):not([type="reset"]):focus:invalid, textarea:invalid, textarea:focus:invalid, select:invalid, select:focus:invalid {
+  border-color: #d32f2f;
+  box-shadow: none;
+}
+
+input:not([type="button"]):not([type="submit"]):not([type="reset"])[readonly], textarea[readonly], select[readonly] {
+  background: #e0e0e0;
+  border-color: #bdbdbd;
+}
+
+::-webkit-input-placeholder {
+  opacity: 1;
+  color: #616161;
+}
+
+::-moz-placeholder {
+  opacity: 1;
+  color: #616161;
+}
+
+::-ms-placeholder {
+  opacity: 1;
+  color: #616161;
+}
+
+::placeholder {
+  opacity: 1;
+  color: #616161;
+}
+
+button, [type="button"], [type="submit"], [type="reset"],
+a.button, label.button, .button,
+a[role="button"], label[role="button"], [role="button"] {
+  display: inline-block;
+  background: #e0e0e0;
+  color: #212121;
+  border: 0;
+  border-radius: 0.1875rem;
+  padding: 0.625rem 0.875rem;
+  margin: 0.5rem;
+  box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.14), 0 0.0625rem 0.3125rem 0 rgba(0, 0, 0, 0.12), 0 0.1875rem 0.0625rem -0.125rem rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+
+input:disabled, input[disabled], textarea:disabled, textarea[disabled], select:disabled, select[disabled], button:disabled, button[disabled], .button:disabled, .button[disabled], [role="button"]:disabled, [role="button"][disabled] {
+  cursor: not-allowed;
+  opacity: 0.75;
+}
+
+input[type="file"] {
+  border: 0;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+}
+
+/*
+  Custom elements for forms and input elements.
+*/
+button.primary, [type="button"].primary, [type="submit"].primary,
+[type="reset"].primary, .button.primary, [role="button"].primary {
+  background: #303f9f;
+  color: #fafafa;
+}
+
+button.primary:hover, button.primary:focus, [type="button"].primary:hover, [type="button"].primary:focus, [type="submit"].primary:hover, [type="submit"].primary:focus,
+[type="reset"].primary:hover,
+[type="reset"].primary:focus, .button.primary:hover, .button.primary:focus, [role="button"].primary:hover, [role="button"].primary:focus {
+  background: #303f9f;
+}
+
+/*
+  Custom style fixes and tweaks for input elements.
+*/
+button, [type="button"], [type="submit"], [type="reset"],
+a.button, label.button, .button,
+a[role="button"], label[role="button"], [role="button"], label {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+button:hover, button:focus, [type="button"]:hover, [type="button"]:focus, [type="submit"]:hover, [type="submit"]:focus, [type="reset"]:hover, [type="reset"]:focus,
+a.button:hover,
+a.button:focus, label.button:hover, label.button:focus, .button:hover, .button:focus,
+a[role="button"]:hover,
+a[role="button"]:focus, label[role="button"]:hover, label[role="button"]:focus, [role="button"]:hover, [role="button"]:focus {
+  background: #e5e5e5;
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.14), 0 0.0625rem 0.4375rem 0 rgba(0, 0, 0, 0.12), 0 0.1875rem 0.0625rem -0.0625rem rgba(0, 0, 0, 0.2);
+}
+
+button.primary:hover, button.primary:focus, [type="button"].primary:hover, [type="button"].primary:focus, [type="submit"].primary:hover, [type="submit"].primary:focus,
+[type="reset"].primary:hover,
+[type="reset"].primary:focus, .button.primary:hover, .button.primary:focus, [role="button"].primary:hover, [role="button"].primary:focus {
+  background: #3f51b5;
+}

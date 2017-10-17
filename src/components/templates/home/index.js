@@ -5,7 +5,6 @@
 * */
 
 /* Styles */
-import '../../../css/_forms.css';
 import '../../../css/_elements.css';
 import '../../../css/_navigation.css';
 import '../../../css/_accessibility.css';
@@ -22,6 +21,7 @@ import './home-styles.css'
 
 /* Components */
 import '../../parts/header/index'
+import '../../parts/sidebar/index'
 import '../../parts/footer/index'
 import '../../parts/excerpt/index'
 
