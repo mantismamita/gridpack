@@ -8,7 +8,8 @@ module.exports = {
     entry: {
         main : "./src/index",
         home : "./src/components/templates/home/index",
-        single : "./src/components/templates/single/index"
+        single : "./src/components/templates/single/index",
+        page : "./src/components/templates/page/index"
     },
     output: {
         path: path.resolve(__dirname, "dist"),

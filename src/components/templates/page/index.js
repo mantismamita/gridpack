@@ -4,11 +4,6 @@
 * equivalent page.php
 * */
 
-/*
-* home config
-*
-* equivalent front-page.php
-* */
 
 /* Styles */
 import '../../../css/_elements.css';
@@ -26,9 +21,9 @@ import './page-styles.css'
 
 /* Components */
 import '../../parts/small-header/index'
+import '../../parts/content/index'
 import '../../parts/sidebar/index'
 import '../../parts/footer/index'
-import '../../parts/content/index'
 
 /* Global Scripts */
 import '../../../js/scripts.js'
