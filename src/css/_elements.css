@@ -192,6 +192,7 @@ a {
     text-decoration: underline;
     opacity: 1;
     transition: opacity 0.3s;
+    word-wrap: break-word;
 }
 
 a:visited {

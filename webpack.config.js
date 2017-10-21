@@ -2,7 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const config = require('./config.js');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
     entry: {

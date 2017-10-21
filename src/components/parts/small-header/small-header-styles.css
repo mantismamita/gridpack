@@ -1,7 +1,9 @@
 @import "../../../css/_vars.css";
 
 .site {
-    grid-template-rows: var(--small-header-height) auto 100px;
+    @media(--lg-viewport) {
+        grid-template-rows: var(--small-header-height) auto 100px;
+    }
 }
 
 .site-header {
@@ -11,27 +13,39 @@
     }
 
     & .site-branding {
+        display: flex;
+
         @media(--lg-viewport) {
             grid-column: 1/1;
         }
 
         & .custom-logo-link{
-            float: left;
+            line-height: 1;
             display: inline-block;
         }
 
         & img {
-            height: 4.5rem;
+            height: 57px;
             display: block;
             background-color: #AA00FF;
+
+            @media(--lg-viewport) {
+                height: 80px;
+            }
         }
 
         & .site-title {
             font-size: 2rem;
             margin: 0;
-            line-height: 1;
             display: inline-block;
-            padding: 0.5rem;
+            padding: 0 .5rem;
+            line-height: 57px;
+
+            @media(--lg-viewport) {
+                line-height: 1;
+                font-size: 3rem;
+                padding: 1rem .5rem;
+            }
 
             & a {
                 text-decoration: none;
@@ -52,8 +66,19 @@
 ## Main navigation menu
 --------------------------------------------------------------*/
 .main-navigation {
-    display: inline-block;
-    width: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @media(--lg-viewport) {
+        position: relative;
+        top: auto;
+        right: auto;
+        clear: both;
+        display: block;
+        float: left;
+        width: 100%;
+    }
 
     & ul {
         display: none;

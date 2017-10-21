@@ -1,0 +1,19 @@
+.site-header {
+  background: #17D2D5;
+}
+
+.content-area{
+  background: #D0F6F6;
+
+  & .entry-content{
+    max-width: 720px;
+  }
+}
+
+.widget-area{
+  background: #73E4E5;
+}
+
+.site-footer {
+  background: #17D2D5;
+}
