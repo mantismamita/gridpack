@@ -13,6 +13,7 @@ html, * {
     font-family: -apple-system, BlinkMacSystemFont,"Segoe UI","Roboto", "Droid Sans","Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
+    box-sizing: border-box;
 }
 /* add anything that doesnt have a set font size */
 input {
@@ -61,7 +62,8 @@ dfn {
 
 h1, h2, h3, h4, h5, h6 {
     line-height: 1.25em;
-    margin: 0.75rem 0.5rem;
+    margin: 0 0.5rem 0.75rem 0.5rem;
+    padding-top: 0.25rem;
     font-weight: 500;
 }
 

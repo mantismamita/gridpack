@@ -4,10 +4,13 @@
 
   & .widget {
     background-color: darkgray;
+    overflow: auto;
+    box-shadow: var(--box-shadow);
   }
 
   & .widget_search {
     background-color: transparent;
+    box-shadow: none;
 
     & input {
       margin: 0;

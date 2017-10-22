@@ -9,11 +9,13 @@
     --gutter-width: 1rem;
     --outer-margin: 2rem;
 
-    --large-header-height: 125px;
+    --large-header-height: 128px;
     --small-header-height: 80px;
     --footer-height: 64px;
 
     --max-width: 1200px;
+
+    --box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, .14), 0 0.0625rem 0.3125rem 0 rgba(0, 0, 0, .12), 0 0.1875rem 0.0625rem -0.125rem rgba(0, 0, 0, .2);
 
 }
 
