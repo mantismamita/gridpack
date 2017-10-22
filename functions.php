@@ -129,7 +129,7 @@ function gridpack_scripts() {
 	wp_register_script( 'gridpack-home', get_template_directory_uri() . '/dist/home.bundle.js', array(), '0.0.1', true );
 	wp_register_script( 'gridpack-single', get_template_directory_uri() . '/dist/single.bundle.js', array(), date("H:i:s"), true );
 	wp_register_script( 'gridpack-page', get_template_directory_uri() . '/dist/page.bundle.js', array(), date("H:i:s"), true );
-	wp_register_script( 'gridpack-main', get_template_directory_uri() . '/dist/main.bundle.js', array(), date("H:i:s"), true );
+	wp_register_script( 'gridpack-default', get_template_directory_uri() . '/dist/default.bundle.js', array(), date("H:i:s"), true );
 	wp_register_script( 'gridpack-common', get_template_directory_uri() . '/dist/common.bundle.js', array(), date("H:i:s"), true );
 
 
@@ -148,8 +148,8 @@ function gridpack_scripts() {
 		wp_enqueue_style( 'gridpack-page-style', get_template_directory_uri() . '/dist/css/page.css', array(), date("H:i:s"));
 		wp_enqueue_script('gridpack-page');
 	} else {
-		wp_enqueue_style( 'gridpack-style', get_template_directory_uri() . '/dist/css/main.css', array(), date("H:i:s"));
-		wp_enqueue_script('gridpack-main');
+		wp_enqueue_style( 'gridpack-style', get_template_directory_uri() . '/dist/css/default.css', array(), date("H:i:s"));
+		wp_enqueue_script('gridpack-default');
 	}
 }
 add_action( 'wp_enqueue_scripts', 'gridpack_scripts' );

@@ -9,7 +9,8 @@ module.exports = {
         main : "./src/index",
         home : "./src/components/templates/home/index",
         single : "./src/components/templates/single/index",
-        page : "./src/components/templates/page/index"
+        page : "./src/components/templates/page/index",
+        default : "./src/components/templates/default/index"
     },
     output: {
         path: path.resolve(__dirname, "dist"),

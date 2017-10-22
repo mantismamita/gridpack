@@ -44,7 +44,7 @@
             @media(--lg-viewport) {
                 line-height: 1;
                 font-size: 3rem;
-                padding: 1rem .5rem;
+                padding: 0 .5rem;
             }
 
             & a {
