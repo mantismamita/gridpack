@@ -27,13 +27,13 @@ $description = get_bloginfo( 'description', 'display' );
            href="#content"><?php esc_html_e( 'Skip to content', 'gridpack' ); ?></a>
         <div class="site-branding">
 			<?php the_custom_logo(); ?>
-			<?php if ( is_front_page() || is_home() ) : ?>
+			<?php if ( is_front_page() ) : ?>
                 <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 			<?php else : ?>
                 <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php endif; ?>
         </div><!-- .site-branding -->
-	    <?php if (( $description || is_customize_preview() ) && ( is_front_page() || is_home() )) : ?>
+	    <?php if (( $description || is_customize_preview() ) && ( is_front_page() )) : ?>
             <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
 	    <?php endif; ?>
 

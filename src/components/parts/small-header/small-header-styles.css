@@ -29,7 +29,6 @@
             height: 57px;
             display: block;
             background-color: #AA00FF;
-            box-shadow: inset 0px 1px 3px 0px rgba(0,0,0,0.5);
 
             @media(--lg-viewport) {
                 height: 80px;
