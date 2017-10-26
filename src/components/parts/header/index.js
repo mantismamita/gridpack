@@ -4,5 +4,6 @@
 
 console.warn('header config')
 
-import './navigation'
+import '../../micro/main-navigation/index'
+
 import './header-styles.css'

@@ -10,6 +10,19 @@ To install clone or download this repository and `npm install`
 
 `npm start` will get you up and running
 
+(Optional) Create a file named config.js and provide the correct values for your environment 
+
+Example
+
+```
+module.exports = {
+    url : 'http://local.wordpress.dev/',
+    themeDir : '/wp-content/themes/gridpack/',
+    fullPath : 'http://local.wordpress.dev/wp-content/themes/gridpack/',
+    ip  : "192.168.50.4"
+}
+```
+
 Some sample components are include and each have their own colour-code
 
 - `src > compenents > templates > home` is `#FFB200`
