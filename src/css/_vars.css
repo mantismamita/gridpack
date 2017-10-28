@@ -9,8 +9,8 @@
     --gutter-width: 1rem;
     --outer-margin: 2rem;
 
-    --large-header-height: 128px;
-    --small-header-height: 80px;
+    --large-header-height: auto;
+    --small-header-height: auto;
     --footer-height: 64px;
 
     --max-width: 1200px;

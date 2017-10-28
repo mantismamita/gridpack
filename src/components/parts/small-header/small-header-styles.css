@@ -9,7 +9,7 @@
 .site-header {
     @media(--lg-viewport) {
         display: grid;
-        grid-template-columns: 3fr 1fr;
+        grid-template-columns: 1fr 3fr;
         box-shadow: var(--box-shadow);
     }
 
@@ -41,15 +41,17 @@
             display: inline-block;
             padding: 0 .5rem;
             line-height: 57px;
+            font-weight: 500;
 
             @media(--lg-viewport) {
                 line-height: 1;
-                font-size: 3rem;
-                padding: 0 .5rem;
+                font-size: 2.5rem;
+                padding: 1rem .5rem;
             }
 
             & a {
                 text-decoration: none;
+                line-height: 1;
             }
         }
     }
@@ -61,95 +63,4 @@
         }
     }
 
-}
-
-/*--------------------------------------------------------------
-## Main navigation menu
---------------------------------------------------------------*/
-.main-navigation {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    @media(--lg-viewport) {
-        position: relative;
-        top: auto;
-        right: auto;
-        clear: both;
-        display: block;
-        float: left;
-        width: 100%;
-    }
-
-    & ul {
-        display: none;
-        list-style: none;
-        margin: 0;
-        padding-left: 0;
-    }
-
-    & ul ul {
-        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-        float: left;
-        position: absolute;
-        top: 100%;
-        left: -999em;
-        z-index: 99999;
-    }
-
-    & ul ul ul {
-        left: -999em;
-        top: 0;
-    }
-
-    & ul ul li:hover > ul,
-    & ul ul li.focus > ul {
-        left: 100%;
-    }
-
-    & ul ul a {
-        width: 200px;
-    }
-
-    & ul li:hover > ul,
-    & ul li.focus > ul {
-        left: auto;
-    }
-
-    & li {
-        position: relative;
-    }
-
-    & a {
-        display: inline-block;
-        background-color: #EFE9F1;
-        color: #3E005D;
-        text-decoration: none;
-        border: none;
-        border-radius: 3px;
-        position: relative;
-        padding: 12px 30px;
-        margin: 0 3px;
-        font-size: 12px;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 0;
-        will-change: box-shadow, transform;
-        transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-    display: flex;
-}
-
-@media screen and (min-width: 37.5em) {
-    .menu-toggle {
-        display: none;
-    }
-    .main-navigation ul {
-        display: flex;
-    }
 }
