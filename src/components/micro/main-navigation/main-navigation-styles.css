@@ -3,60 +3,48 @@
 ## Main navigation menu
 --------------------------------------------------------------*/
 .main-navigation {
-    position: absolute;
-    top: 0;
-    right: 0;
 
-@media(--lg-viewport) {
-    position: relative;
-    top: auto;
-    right: auto;
-    clear: both;
-    display: block;
-    float: left;
-    width: 100%;
-}
+    & ul {
+          display: none;
+          list-style: none;
+          margin: 0;
+          padding-left: 0;
+    }
 
-& ul {
-      display: none;
-      list-style: none;
-      margin: 0;
-      padding-left: 0;
-  }
+    & ul ul {
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          float: left;
+          position: absolute;
+          top: 100%;
+          left: -999em;
+          z-index: 99999;
+    }
 
-& ul ul {
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-      float: left;
-      position: absolute;
-      top: 100%;
-      left: -999em;
-      z-index: 99999;
-  }
-
-& ul ul ul {
+    & ul ul ul {
       left: -999em;
       top: 0;
-  }
+    }
 
-& ul ul li:hover > ul,
-& ul ul li.focus > ul {
+    & ul ul li:hover > ul,
+    & ul ul li.focus > ul {
       left: 100%;
-  }
+    }
 
-& ul ul a {
+    & ul ul a {
       width: 200px;
-  }
+    }
 
-& ul li:hover > ul,
-& ul li.focus > ul {
+    & ul li:hover > ul,
+    & ul li.focus > ul {
       left: auto;
-  }
+    }
 
-& li {
+    & li {
       position: relative;
-  }
+      margin: 2px;
+    }
 
-& a {
+    & a {
       display: inline-block;
       background-color: #FFE7EF;
       color: #460016;
@@ -65,7 +53,6 @@
       border-radius: 3px;
       position: relative;
       padding: 12px 20px;
-      margin: 0 3px;
       font-size: 12px;
       font-weight: 400;
       text-transform: uppercase;
@@ -78,7 +65,7 @@
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-    display: flex;
+    display: block;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -87,5 +74,7 @@
     }
     .main-navigation ul {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
     }
 }

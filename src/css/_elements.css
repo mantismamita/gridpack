@@ -99,6 +99,7 @@ h6 {
 
 p {
     margin: 0.5rem;
+    overflow: hidden;
 }
 
 ol, ul {
