@@ -33,5 +33,8 @@
   "bugs": {
     "url": "https://github.com/mantismamita/gridpack/issues"
   },
-  "homepage": "https://github.com/mantismamita/gridpack#readme"
+  "homepage": "https://github.com/mantismamita/gridpack#readme",
+  "dependencies": {
+    "fontfaceobserver": "^2.0.13"
+  }
 }

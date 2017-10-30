@@ -116,15 +116,20 @@ function gridpack_widgets_init() {
 }
 add_action( 'widgets_init', 'gridpack_widgets_init' );
 
+
+/**
+ * Enquues Google fonts on all pages
+ */
+function gridpack_add_google_fonts() {
+    wp_enqueue_style( 'gridpack-google-fonts', 'https://fonts.googleapis.com/css?family=Roboto+Slab:400,700', false );
+}
+
+add_action( 'wp_enqueue_scripts', 'gridpack_add_google_fonts' );
+
 /**
  * Enqueue scripts and styles.
  */
 function gridpack_scripts() {
-
-	/*wp_enqueue_script( 'gridpack-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-
-	wp_enqueue_script( 'gridpack-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );*/
 
 	wp_register_script( 'gridpack-home', get_template_directory_uri() . '/dist/home.bundle.js', array(), '0.0.1', true );
 	wp_register_script( 'gridpack-single', get_template_directory_uri() . '/dist/single.bundle.js', array(), date("H:i:s"), true );
