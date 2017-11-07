@@ -24,6 +24,7 @@ import '../../parts/small-header/index'
 import '../../parts/content/index'
 import '../../parts/sidebar/index'
 import '../../parts/footer/index'
+import '../../micro/comments/index'
 
 /* Global Scripts */
 import '../../../js/scripts'

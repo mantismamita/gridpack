@@ -30,7 +30,7 @@ $description = get_bloginfo( 'description', 'display' );
 			<?php if ( is_front_page() ) : ?>
                 <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 			<?php else : ?>
-                <p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+                <p class="site-title h2"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 			<?php endif; ?>
         </div><!-- .site-branding -->
 	    <?php if (( $description || is_customize_preview() ) && ( is_front_page() )) : ?>

@@ -37,11 +37,11 @@
 
         & .site-title {
             font-size: 2rem;
+            font-weight: 700;
             margin: 0;
             display: inline-block;
             padding: 0 .5rem;
             line-height: 57px;
-            font-weight: 500;
 
             @media(--lg-viewport) {
                 line-height: 1;

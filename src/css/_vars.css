@@ -6,6 +6,9 @@
     --dark-accent: #4D4847;
     --text: #1B1E2B;
 
+    --titleFont: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    --titleFontLoaded: "Roboto Slab";
+
     --gutter-width: 1rem;
     --outer-margin: 2rem;
 

@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
-
+@import "./_vars.css";
 /*
   Browsers resets and base typography.
 */
@@ -60,11 +60,12 @@ dfn {
     font-style: italic;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6  {
     line-height: 1.25em;
     margin: 0 0.5rem 0.75rem 0.5rem;
     padding-top: 0.25rem;
     font-weight: 700;
+    font-family: var(--titleFont);
 }
 
 .fonts-loaded h1,
@@ -72,8 +73,14 @@ h1, h2, h3, h4, h5, h6 {
 .fonts-loaded h3,
 .fonts-loaded h4,
 .fonts-loaded h5,
-.fonts-loaded h6  {
-    font-family: "Roboto Slab", Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+.fonts-loaded h6,
+.fonts-loaded .h1,
+.fonts-loaded .h2,
+.fonts-loaded .h3,
+.fonts-loaded .h4,
+.fonts-loaded .h5,
+.fonts-loaded .h6 {
+    font-family: var(--titleFontLoaded);
 }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
@@ -207,6 +214,7 @@ a {
     transition: opacity 0.3s;
     word-wrap: break-word;
     font-family: inherit;
+    font-weight: inherit;
     text-decoration: none;
 }
 
