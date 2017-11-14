@@ -15,6 +15,7 @@
 
     & .site-branding {
         display: flex;
+        padding: 0 0.5rem;
 
         @media(--lg-viewport) {
             grid-column: 1/1;

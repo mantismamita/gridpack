@@ -15,5 +15,10 @@
 .entry-meta a:visited,
 footer a,
 footer a:visited {
-  color: #01873c;
+  color: #02ff6c;
+}
+
+.entry-meta a:hover,
+footer a:hover {
+  color: #62FFA0;
 }

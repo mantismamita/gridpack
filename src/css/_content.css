@@ -10,7 +10,8 @@
 }
 
 .hentry {
-    margin: 0 0 1.5em;
+    margin: 0 0 1.5rem;
+    padding: 1rem;
     box-shadow: var(--box-shadow);
 }
 
@@ -21,20 +22,10 @@
 .page-content,
 .entry-content,
 .entry-summary {
-    margin: 1em 0 0;
+    margin: 1rem 0 0;
 }
 
 .page-links {
     clear: both;
-    margin: 0 0 1.5em;
-}
-/*--------------------------------------------------------------
-## Comments
---------------------------------------------------------------*/
-.comment-content a {
-    word-wrap: break-word;
-}
-
-.bypostauthor {
-    display: block;
+    margin: 0 0 1.5rem;
 }

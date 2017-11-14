@@ -223,7 +223,7 @@ a:visited {
 }
 
 a:hover, a:focus {
-    opacity: 0.75;
+    color: #0c26b5;
 }
 
 figcaption {
