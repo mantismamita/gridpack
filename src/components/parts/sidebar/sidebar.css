@@ -1,16 +1,29 @@
 @import "../../../css/_vars.css";
 
 .site-sidebar{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0 1rem;
+
+  @media(--md-viewport) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media(--lg-viewport) {
+    display: block;
+  }
 
   & .widget {
     background-color: darkgray;
     overflow: auto;
     box-shadow: var(--box-shadow);
+    padding: .75rem;
   }
 
   & .widget_search {
     background-color: transparent;
     box-shadow: none;
+    grid-column: 1 / span 3;
+    padding: 0;
 
     & input {
       margin: 0;
