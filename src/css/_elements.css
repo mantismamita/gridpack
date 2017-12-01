@@ -61,7 +61,7 @@ dfn {
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6  {
-    line-height: 1.25em;
+    line-height: 1.2em;
     margin: 0 0.5rem 0.75rem 0.5rem;
     padding-top: 0.25rem;
     font-weight: 700;
@@ -81,6 +81,12 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6  {
 .fonts-loaded .h5,
 .fonts-loaded .h6 {
     font-family: var(--titleFontLoaded);
+    line-height: 1.25em;
+
+    & * {
+        font-family: var(--titleFontLoaded);
+        line-height: 1.25em;
+    }
 }
 
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
