@@ -27,3 +27,5 @@ import '../../parts/excerpt/index'
 
 /* Global Scripts */
 import '../../../js/scripts.js'
+
+import './home-scripts'

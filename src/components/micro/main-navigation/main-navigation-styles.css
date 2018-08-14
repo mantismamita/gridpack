@@ -1,80 +1,139 @@
+@import '../../../css/_vars.css';
 
 /*--------------------------------------------------------------
 ## Main navigation menu
 --------------------------------------------------------------*/
 .main-navigation {
 
-    & ul {
-          display: none;
-          list-style: none;
-          margin: 0;
-          padding-left: 0;
-    }
+  & ul {
+    display: none;
+    list-style: none;
+    margin: 2px 0;
+    padding-left: 0;
+  }
 
-    & ul ul {
-          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-          float: left;
-          position: absolute;
-          top: 100%;
-          left: -999em;
-          z-index: 99999;
-    }
+  & ul ul {
+    float: left;
+    position: absolute;
+    top: 100%;
+    left: -999em;
+    z-index: 99999;
+  }
 
-    & ul ul ul {
-      left: -999em;
-      top: 0;
-    }
+  & ul ul ul {
+    left: -999em;
+    top: 0;
+    margin: 0 2px;
+  }
 
-    & ul ul li:hover > ul,
-    & ul ul li.focus > ul {
-      left: 100%;
-    }
+  & ul ul li:hover > ul,
+  & ul ul li.focus > ul {
+    left: 100%;
+  }
 
-    & ul ul a {
-      width: 200px;
-    }
+  & ul ul a {
+    width: 200px;
+  }
 
-    & ul li:hover > ul,
-    & ul li.focus > ul {
-      left: auto;
-    }
+  & ul li:hover > ul,
+  & ul li.focus > ul {
+    left: auto;
+  }
 
-    & li {
-      position: relative;
-      margin: 2px;
-    }
+  & li {
+    position: relative;
+    margin: 2px;
+  }
 
-    & a {
-      display: inline-block;
-      background-color: #FFE7EF;
-      color: #460016;
-      text-decoration: none;
-      border: none;
-      border-radius: 3px;
-      position: relative;
-      padding: 12px 20px;
-      font-size: 12px;
-      font-weight: 400;
-      text-transform: uppercase;
-      letter-spacing: 0;
-      will-change: box-shadow, transform;
-      transition: box-shadow 0.2s cubic-bezier(0.4, 0, 1, 1), background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  & a {
+    display: inline-block;
+    color: #460016;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    will-change: transform, background-color;
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
 /* Small menu. */
 .menu-toggle,
 .main-navigation.toggled ul {
-    display: block;
+  display: block;
 }
 
-@media screen and (min-width: 37.5em) {
-    .menu-toggle {
-        display: none;
+@media (--xs-viewport) {
+  .main-navigation .menu {
+    width: 100vw;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar-track {
+      height: 10px;
     }
-    .main-navigation ul {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-end;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation ul {
+    display: block;
+    width: max-content;
+    padding-left: 0;
+    overflow-y: hidden;
+
+    & > li {
+      display: inline-block;
     }
+  }
+}
+
+@media (--md-viewport) {
+  .main-navigation .menu {
+    width: 100%;
+    overflow-x: visible;
+    overflow-y: visible;
+  }
+  .main-navigation ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 0;
+    overflow-y: visible;
+
+    & > li {
+      display: inline-flex;
+      & a {
+        background-color: #ffd5df;
+      }
+    }
+    & > li > ul > li {
+        margin: 1px 0;
+        padding: 1px 0;
+        & a {
+            background-color:  #ffa5cf;
+        }
+    }
+    & > li > ul > li > ul > li{
+        margin: 0 0 2px 1px;
+        padding: 1px 0;
+        & a {
+          background-color: #ff8fc7;
+        }
+    }
+  }
+}
+
+@media (--lg-viewport) {
+  main-navigation ul {
+    padding-left: 0;
+    overflow-y: visible;
+  }
 }

@@ -1,9 +1,11 @@
 @import "../../../css/_vars.css";
 
 .site-sidebar{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 0 1rem;
+  @media(--sm-viewport) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 1rem;
+  }
 
   @media(--md-viewport) {
     grid-template-columns: 1fr 1fr 1fr;

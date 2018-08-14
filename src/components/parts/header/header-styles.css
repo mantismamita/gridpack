@@ -11,6 +11,7 @@
 
     & .site-branding {
         display: flex;
+        padding-left: 0.5rem;
 
         @media(--lg-viewport) {
             grid-row: 1/2;
@@ -43,7 +44,7 @@
             @media(--lg-viewport) {
                 line-height: 1;
                 font-size: 2.5rem;
-                padding: 1rem .5rem;
+                padding: 1rem;
             }
         }
     }

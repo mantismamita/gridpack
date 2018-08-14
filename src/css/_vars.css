@@ -22,7 +22,8 @@
 
 }
 
-@custom-media --xs-viewport (max-width: 415px);
+@custom-media --max-xs-viewport (max-width: 500px);
+@custom-media --xs-viewport (min-width: 500px);
 @custom-media --sm-viewport (min-width: 768px);
 @custom-media --md-viewport (min-width: 1024px);
 @custom-media --lg-viewport (min-width: 1200px);

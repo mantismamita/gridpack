@@ -4,7 +4,6 @@
 * equivalent page.php
 * */
 
-
 /* Styles */
 import '../../../css/_elements.css';
 import '../../../css/_navigation.css';

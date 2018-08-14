@@ -6,8 +6,6 @@
  */
 ( function() {
 
-    console.warn('navigation.js')
-
     var container, button, menu, links, i, len;
 
     container = document.getElementById( 'site-navigation' );

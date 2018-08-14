@@ -4,12 +4,6 @@
 * equivalent single.php
 * */
 
-/*
-* home config
-*
-* equivalent front-page.php
-* */
-
 /* Styles */
 import '../../../css/_elements.css';
 import '../../../css/_navigation.css';
@@ -32,4 +26,6 @@ import '../../parts/content/index'
 import '../../micro/comments/index'
 
 /* Global Scripts */
-import '../../../js/scripts.js'
+import '../../../js/scripts'
+
+

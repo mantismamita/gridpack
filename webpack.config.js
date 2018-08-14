@@ -48,12 +48,32 @@ module.exports = {
                         }
                     ]
                 })
+            },         
+            {
+                test: /\.svg$/,
+                include: path.resolve( __dirname, "src/icons" ),
+                loaders: [
+                    'svg-sprite-loader?' + JSON.stringify({
+                        name: '[name]',
+                        prefixize: true
+                    }),
+                    'svgo-loader?' + JSON.stringify({
+                        plugins: [
+                            { removeTitle: true },
+                            { convertPathData: false },
+                            { removeUselessStrokeAndFill: true }
+                        ]
+                    })
+                ]
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
-                use: [
-                    'file-loader'
-                ]
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        exclude: path.resolve( __dirname, "src/icons" )
+                    }
+                }
             }
         ],
     },
