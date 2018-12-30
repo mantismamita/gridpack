@@ -57,23 +57,6 @@ module.exports = {
             }
         ],
     },
-    devServer: {
-        historyApiFallback: true,
-        compress: true,
-        port: 9000,
-        https: config.url.indexOf('https') > -1 ? true : false,
-        publicPath: config.fullPath,
-        proxy: {
-            '*': {
-                'target': config.url,
-                'secure': false
-            },
-            '/': {
-                target: config.url,
-                secure: false
-            }
-        },
-    },
     plugins: [
         new ExtractTextPlugin({
             filename:  (getPath) => {
@@ -88,9 +71,6 @@ module.exports = {
                 ],
                 reloadDelay: 0
             }
-        ),
-        /*new webpack.optimize.CommonsChunkPlugin({
-            name: 'common'
-        })*/
+        )
     ]
 }

@@ -22,6 +22,7 @@
   "scripts": {
     "test": "test",
     "start": "webpack --watch",
+    "build": "webpack",
     "serve": "webpack-dev-server --open"
   },
   "repository": {

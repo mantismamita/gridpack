@@ -3,8 +3,10 @@
     --white: #F5F7EF;
     --light-accent: #E7DFC6;
     --primary: #0EB4A9;
+    --secondary: #7451df;
     --dark-accent: #4D4847;
     --text: #1B1E2B;
+    --background: #e8f2f7;
 
     --titleFont: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     --titleFontLoaded: "Roboto Slab";
@@ -18,7 +20,7 @@
 
     --max-width: 1200px;
 
-    --box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, .14), 0 0.0625rem 0.3125rem 0 rgba(0, 0, 0, .12), 0 0.1875rem 0.0625rem -0.125rem rgba(0, 0, 0, .2);
+    --box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, .04), 0 0.0625rem 0.3125rem 0 rgba(0, 0, 0, .02), 0 0.1875rem 0.0625rem -0.125rem rgba(0, 0, 0, .1);
 
 }
 

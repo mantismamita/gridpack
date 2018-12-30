@@ -1,7 +1,11 @@
 @import "./_vars.css";
 
-.site {
+.container{
     max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.site {
     margin: 0 auto;
 
     @media(--lg-viewport) {
@@ -15,9 +19,8 @@
     }
 }
 
-.site-header {
+.header-wrapper {
     grid-area: header;
-    background: aquamarine;
 }
 
 .site-content {
@@ -27,14 +30,12 @@
         grid-area: content;
         display: grid;
         grid-template-columns: 4fr 2fr;
-        margin-top: 1rem;
-        box-shadow: var(--box-shadow);
+        margin: 1rem auto;
     }
 }
 
 .content-area{
-    background: darkcyan;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem 0;
 
     @media(--lg-viewport) {
         grid-column: 1 / 2;
@@ -43,9 +44,7 @@
 }
 
 .widget-area{
-
-    background: darkturquoise;
-    padding: 1rem;
+    padding: 1rem 0 1rem 1rem;
 
     @media(--lg-viewport) {
         grid-column: 2 / 2;
@@ -54,7 +53,6 @@
 }
 
 .site-footer {
-    background: mediumaquamarine;
     padding: 1rem;
 
     @media(--lg-viewport) {

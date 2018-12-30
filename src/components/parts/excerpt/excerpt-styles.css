@@ -1,10 +1,12 @@
+@import "../../../css/_vars.css";
+
 .hentry{
-  background: #f0f8ff;
+
 }
 
 .entry-meta, footer {
   display: block;
-  background: #283593;
+  background: var(--primary);
   color: #fafafa;
   margin: 1rem 0 0;
   padding: 0.5rem 0.5rem 0.75rem;

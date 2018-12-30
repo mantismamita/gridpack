@@ -1,10 +1,10 @@
 .hentry{
-  background: #d2ffe6;
+
 }
 
 .entry-meta, footer {
   display: block;
-  background: #01873c;
+  background: #24c8c1;
   color: #fafafa;
   margin: 1rem 0 0;
   padding: 0.5rem 0.5rem 0.75rem;
@@ -15,10 +15,10 @@
 .entry-meta a:visited,
 footer a,
 footer a:visited {
-  color: #02ff6c;
+
 }
 
 .entry-meta a:hover,
 footer a:hover {
-  color: #62FFA0;
+
 }

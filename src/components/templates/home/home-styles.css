@@ -1,21 +1,21 @@
 .site-header {
-    background: #FFBB00;
+    //background: #FFBB00;
 }
 
 .content-area{
-    background: #FFECB9;
+    //background: #FFECB9;
 }
 
 .widget-area{
-    background: #FFD35C;
+    //background: #FFD35C;
 }
 
 .site-footer {
-    background: #FFBB00;
+    //background: #FFBB00;
 }
 
 a, a:visited{
-    color: #5D4400;
+    color: var(--primary);
 }
 
 a:hover{

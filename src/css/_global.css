@@ -1,7 +1,7 @@
 @import '_vars.css';
 
 body {
-  background-color: var(--light-accent);
+  background: url('../img/bg.gif');
 }
 
 .btn {

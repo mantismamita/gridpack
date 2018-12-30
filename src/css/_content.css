@@ -11,7 +11,7 @@
 
 .hentry {
     margin: 0 0 1.5rem;
-    padding: 1rem;
+    padding: 1rem 1rem 1rem .5rem;
     box-shadow: var(--box-shadow);
 }
 

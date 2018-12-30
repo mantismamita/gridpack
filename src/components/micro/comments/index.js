@@ -1,5 +1,5 @@
 /*
-* search-form config
+* comments config
 * */
 
 import './comments.css'

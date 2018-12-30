@@ -3,7 +3,6 @@
 .site-sidebar{
 
   & .widget {
-    background-color: darkgray;
     overflow: auto;
     box-shadow: var(--box-shadow);
   }

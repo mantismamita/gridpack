@@ -29,7 +29,6 @@
         & img {
             height: 57px;
             display: block;
-            background-color: #AA00FF;
 
             @media(--lg-viewport) {
                 height: 80px;

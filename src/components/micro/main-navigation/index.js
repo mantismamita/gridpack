@@ -1,5 +1,5 @@
 /*
-* search-form config
+* main-navigation config
 * */
 
 import './main-navigation-styles.css';
