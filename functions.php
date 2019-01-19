@@ -130,6 +130,7 @@ add_action( 'wp_enqueue_scripts', 'gridpack_add_google_fonts' );
  * Enqueue scripts and styles.
  */
 function gridpack_scripts() {
+    wp_register_script( 'serviceworker', get_template_directory_uri() . '/serviceworker.js', array(), '0.0.1', true );
 
 	wp_register_script( 'gridpack-home', get_template_directory_uri() . '/dist/home.bundle.js', array(), '0.0.1', true );
 	wp_register_script( 'gridpack-single', get_template_directory_uri() . '/dist/single.bundle.js', array(), date("H:i:s"), true );
@@ -165,6 +166,26 @@ function gridpack_remove_jquery( ){
 	wp_dequeue_script( 'jquery');
 	wp_deregister_script( 'jquery');
 }*/
+
+
+
+function gridpack_register_serviceworker(){ ?>
+    <script>
+    if (navigator.serviceWorker) {
+        navigator.serviceWorker.register( '/serviceworker.js')
+            .then( function (registration) {
+                console.log('success!', registration.scope);
+            })
+            .catch( function (error) {
+                console.error('failure!', error);
+            });
+        console.log('All done.');
+    }
+        </script>”
+
+<?php }
+
+add_action('wp_head', 'gridpack_register_serviceworker');
 
 /**
  * Implement the Custom Header feature.

@@ -1,7 +1,11 @@
 *.DS_Store
 sass-cache/
 node_modules/
+ssl/
+ca/
 bs-config.js
 config.js
 npm-debug.log
 dist/
+manifest.json
+icons

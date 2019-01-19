@@ -1,8 +1,10 @@
 const path = require('path');
 const webpack = require('webpack');
 const config = require('./config.js');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const devMode = process.env.NODE_ENV !== 'production';
 
 module.exports = {
     entry: {
@@ -19,6 +21,13 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\serviceworker.js$/,
+                loader: 'file-loader',
+                options: {
+                    outputPath: 'sw',
+                },
+            },
+            {
                 test: /\.js$/,
                 exclude: /(node_modules)/,
                 use: {
@@ -29,48 +38,77 @@ module.exports = {
                 }
             },
             {
+                test: /\.svg$/,
+                include: path.resolve( __dirname, "src/icons" ),
+                loaders: [
+                    'svgo-loader?' + JSON.stringify({
+                        plugins: [
+                            { removeTitle: true },
+                            { convertPathData: false },
+                            { removeUselessStrokeAndFill: true }
+                        ]
+                    }),
+                    'svg-sprite-loader?' + JSON.stringify({
+                        name: '[name]',
+                        prefixize: true
+                    })
+                ]
+            },
+            {
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                importLoaders: 1,
-                                sourceMap: true
-                            }
-                        },
-                        {
-                            loader: 'postcss-loader',
-                            options: {
-                                sourceMap: true
-                            }
-                        }
-                    ]
-                })
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'postcss-loader'
+                ]
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
                 use: [
-                    'file-loader'
-                ]
+                    'file-loader',
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            exclude: path.resolve( __dirname, "src/icons" )
+                        },
+                    },
+                ],
             }
         ],
     },
-    plugins: [
-        new ExtractTextPlugin({
-            filename:  (getPath) => {
-                return getPath('css/[name].css').replace('css/js', 'css');
+    devServer: {
+        historyApiFallback: true,
+        compress: true,
+        port: 9000,
+        https: config.url.indexOf('https') > -1 ? true : false,
+        publicPath: config.fullPath,
+        proxy: {
+            '*': {
+                'target': config.url,
+                'secure': false
             },
-            allChunks: true
+            '/': {
+                target: config.url,
+                secure: false
+            }
+        },
+    },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: '[name].css',
+            options: {
+                publicPath: './css'
+            }
         }),
         new BrowserSyncPlugin( {
-                proxy: config.url,
-                files: [
-                    '**/*.php'
-                ],
-                reloadDelay: 0
-            }
-        )
+            proxy: config.url,
+            files: [
+                '**/*.php'
+            ],
+            reloadDelay: 0
+        }),
+        new webpack.ProvidePlugin({
+            datepicker: 'js-datepicker'
+        })
     ]
 }
